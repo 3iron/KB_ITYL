@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ellipsis</title>
+    <style>
+      h1,
+      p {
+        width: 300px;
+      }
+      .ellipsis {
+        /* white-space : 다음 줄로 넘어간다 */
+        white-space: nowrap;
+        overflow: hidden;
+        /* text-overflow: ellipsis = 생략 (...로 표시) */
+        text-overflow: ellipsis;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 class="ellipsis">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo animi saepe
+      recusandae voluptate nulla, enim, autem tenetur unde dolorem eaque
+      inventore exercitationem facilis vel quae hic. Fuga eveniet aliquid
+      quisquam.
+    </h1>
+    <p class="ellipsis">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo animi saepe
+      recusandae voluptate nulla, enim, autem tenetur unde dolorem eaque
+      inventore exercitationem facilis vel quae hic. Fuga eveniet aliquid
+      quisquam.
+    </p>
+  </body>
+</html>

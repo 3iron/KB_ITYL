@@ -2,7 +2,7 @@
   <div>
     <h3>당신이 경험한 프론트 엔드 기술은? (첫번째: Slot사용(X))</h3>
     <!-- <span v-for="item in items" :key="item.id"> {{ item.label }} , </span> -->
-    <CheckBox1
+    <CheckBox2
       v-for="item in items"
       :key="item.id"
       :id="item.id"
@@ -10,11 +10,19 @@
       :label="item.label"
       @check-changed="CheckBoxChanged"
     />
+    <!-- slot 하나인 경우 컴포넌트 태그 사이에 레이아웃 생성 -->
+    <span
+      v-if="item.checked === true"
+      style="color: blue; text-decoration: underline"
+    >
+      <i>{{ item.label }}</i>
+    </span>
+    <span v-else style="color: gray">{{ item.label }}</span>
   </div>
 </template>
 
 <script>
-import CheckBox1 from './CheckBox1.vue';
+import CheckBox2 from './CheckBox2.vue';
 
 export default {
   name: 'NoSlotTest',

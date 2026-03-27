@@ -6,16 +6,26 @@
       :class="{ 'list-group-item-success': todoItem.completed }"
     >
       <!-- 체크박스 : completed와 같은 값으로 v-model 양방향 동적 -->
+
+      <!-- <input type="checkbox" class="pointer me-3" v-model="todoItem.completed"/> -->
+      <!-- 객체 props에 v-model을 쓰면 부모 데이터도 같이 바뀐다. 
+      -> 하지만 props는 읽기 전용이 원칙이라서 권장 x 
+      -> 해결 : 자식 컴포넌트에서 $emit으로 부모에게 알려서 바꾸기
+      -->
+
       <input
         type="checkbox"
         class="pointer me-3"
-        v-model="todoItem.completed"
+        @click="$emit('checkbox-completed', todoItem.id)"
+        :checked="todoItem.completed"
       />
+
       <span class="pointer" :class="{ 'todo-done': todoItem.completed }">
         {{ todoItem.todo }}
         {{ todoItem.completed ? '(완료)' : '' }}
         <!-- 삼항연산자 : 조건식 ? true : false -->
       </span>
+
       <span
         class="float-end badge bg-secondary pointer"
         @click="$emit('delete-todo', todoItem.id)"
