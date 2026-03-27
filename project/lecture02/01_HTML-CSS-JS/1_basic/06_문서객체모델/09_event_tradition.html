@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      window.onload = function () {
+        let button = document.getElementById('button');
+
+        button.onclick = function () {
+          alert('click');
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <button id="button">버튼</button>
+    <hr />
+
+    <h2>이벤트(Event)</h2>
+    <pre>
+      이벤트(Event) : 동작, 행위 
+      -> 브라우저에서의 동작, 행위 : click, keyup, keydown, change, submit, ... 
+
+      이벤트 리스너 
+
+      이벤트 핸들러 
+    </pre>
+
+    <hr />
+    <h3>인라인 이벤트 모델</h3>
+    <h3>고전 이벤트 모델</h3>
+    <h3>표준 이벤트 모델</h3>
+
+    <button onclick="test1()">인라인 이벤트 모델</button>
+    <script>
+      function test1() {
+        alert('인라인 이벤트 모델');
+      }
+    </script>
+
+    <button id="test2">고전 이벤트 모델</button>
+
+    <script>
+      // #test2인 버튼 클릭 시 알림창 출력
+      document.getElementById('test2').onclick = function () {
+        alert('고전 이벤트 모델');
+      };
+    </script>
+
+    <button id="test3">표준 이벤트 모델</button>
+    <script>
+      document.getElementById('test3').addEventListener('click', function () {
+        alert('표준 이벤트 모델');
+      });
+    </script>
+  </body>
+</html>

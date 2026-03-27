@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      div h1 {
+        background-color: yellow;
+      }
+
+      /* div > ul > li > a { */
+      div > ul > li:first-child {
+        background-color: red;
+      }
+
+      div li:nth-child(1) {
+        background-color: green;
+      }
+
+      div li:last-child {
+        background-color: blue;
+      }
+      /* li .second : li의 후손의 second 클래스 */
+      /* class */
+      li.second {
+        font-size: 24px;
+      }
+      /* id */
+      #title:hover {
+        color: red;
+      }
+
+      body {
+        /* 너비 */
+        width: 1000px;
+        border: 1px solid black;
+      }
+
+      div {
+        width: 80%;
+        background: plum;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="title">HTML5</h1>
+    <div>
+      <ul>
+        <li><a href="#">메뉴 - 1</a></li>
+        <li class="second"><a href="#">메뉴 - 2</a></li>
+        <li><a href="#">메뉴 - 3</a></li>
+      </ul>
+    </div>
+    <div>
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div>
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>Lorem ipsum dolor sit amet.</p>
+      <p>서울특별시 강서구 내발산동</p>
+    </div>
+  </body>
+</html>

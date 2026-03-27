@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script>
+      window.onload = function () {
+        document.body.setAttribute('data-custom', 'value');
+        // 요소.setAttribute("속성명", "속성값")
+        // -> 해당 요소의 속성명="속성값" 으로 추가.
+        // -> <body data-custom="value">
+
+        let value = document.body.getAttribute('data-custom');
+        // 요소.getAttribute("속성명") : 속성값 얻어오기
+        alert(value);
+      };
+    </script>
+  </head>
+  <body data-custom="value">
+    <div data-practice="practice">practice</div>
+    <script>
+      // div 태그에 id 속성 추가 - id명 : practice
+      // div 태그에 class 속성 추가 - class명 : pr
+      window.onload = function () {
+        // body 는 document.body로 찾을 수 있지만
+        // 그 외의 안 찾아지는 건 getElementsByTagName('div'); 이런 식으로 찾는다
+        // 인덱스 번호로 찾아짐
+        document.getElementsByTagName('div')[0];
+        // querySelector 같은 단수형은 하나로 가져오는데
+        // getElements 같은 복수형은 배열로 담긴다. -> 인덱스 번호를 붙여야 한다
+
+        // 요소 잘 얻어왔는지 콘솔에 출력
+        // console.log(document.getElementsByTagName('div'));
+        document.querySelector('div').setAttribute('id', 'practice');
+        document.querySelector('div').setAttribute('class', 'pr');
+      };
+    </script>
+  </body>
+</html>

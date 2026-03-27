@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const name = '전혜선';
+      // 리터럴 : 값
+      // 문자열 리터럴 표기법 :'', "", [](배열), {}(객체)
+
+      // 객체는 속성과 기능을 가진다.
+      let person = {
+        name: '박지훈',
+        eat: function (x) {
+          console.log(name); // 전혜선 - 객체 외부 변수 호출
+
+          // 같은 객체 내부의 다른 속성을 호출하고 싶은 경우
+          // 현재 객채를 뜻하는 this를 써야한다. (person.name)
+          alert(this.name + '이 ' + x + '을 먹는다');
+        },
+      };
+
+      console.log(person.name);
+      console.log(person.eat('빵'));
+      // 함수명 : 함수 자체
+      // 함수명() : 함수 호출
+    </script>
+  </body>
+</html>
