@@ -4,6 +4,37 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Media Feature</title>
+    <style>
+      /* 스마트폰 */
+      @media screen and (max-width: 767px) {
+        body {
+          background-color: red;
+        }
+      }
+
+      /* 태블릿PC */
+      @media screen and (min-width: 768px) and (max-width: 959px) {
+        body {
+          background-color: blue;
+        }
+      }
+
+      /* 데스크톱 */
+      @media screen and (min-width: 960px) {
+        body {
+          background-color: blue;
+        }
+      }
+    </style>
   </head>
-  <body></body>
+  <body>
+    <h1>Lorem ipsum dolor sit amet.</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Esse nostrum
+      error corrupti enim illo ex perspiciatis laborum nemo, expedita
+      consequatur similique tempore, rerum repellat quasi quibusdam! Maxime
+      magnam odio eveniet?
+    </p>
+  </body>
 </html>
+;
