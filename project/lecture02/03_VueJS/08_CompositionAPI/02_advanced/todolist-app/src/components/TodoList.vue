@@ -1,21 +1,21 @@
 <template>
   <ul class="list-group">
     <TodoListItem
-      v-for="item in sortedTodoList"
+      v-for="item in todoList"
       :key="item.id"
       :todoItem="item"
       @delete-todo="emit('delete-todo', $event)"
       @toggle-completed="emit('toggle-completed', $event)"
       @toggle-favorite="emit('toggle-favorite', $event)"
+      @edit-todo="emit('edit-todo', $event)"
     />
   </ul>
 </template>
 
 <script setup>
-import { computed } from 'vue';
 import TodoListItem from './TodoListItem.vue';
 
-const props = defineProps({
+defineProps({
   todoList: {
     type: Array,
     required: true,
@@ -26,11 +26,6 @@ const emit = defineEmits([
   'delete-todo',
   'toggle-completed',
   'toggle-favorite',
+  'edit-todo',
 ]);
-
-const sortedTodoList = computed(() => {
-  return [...props.todoList].sort(
-    (a, b) => Number(b.favorite) - Number(a.favorite),
-  );
-});
 </script>

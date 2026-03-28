@@ -8,7 +8,9 @@
       <span class="pointer" @click.stop="emit('toggle-favorite', todoItem.id)">
         <i
           :class="
-            todoItem.favorite ? 'bi bi-star-fill text-warning' : 'bi bi-star'
+            todoItem.favorite
+              ? 'bi bi-star-fill text-warning'
+              : 'bi bi-star text-secondary'
           "
         ></i>
       </span>
@@ -18,24 +20,37 @@
       </span>
     </div>
 
-    <span
-      class="badge bg-secondary pointer"
-      @click.stop="emit('delete-todo', todoItem.id)"
-    >
-      삭제
-    </span>
+    <div class="d-flex align-items-center gap-2">
+      <span
+        class="badge bg-info text-dark pointer"
+        @click.stop="emit('edit-todo', todoItem.id)"
+      >
+        수정
+      </span>
+
+      <span
+        class="badge bg-secondary pointer"
+        @click.stop="emit('delete-todo', todoItem.id)"
+      >
+        삭제
+      </span>
+    </div>
   </li>
 </template>
 
 <script setup>
 defineProps({
-  todoItem: { type: Object, required: true },
+  todoItem: {
+    type: Object,
+    required: true,
+  },
 });
 
 const emit = defineEmits([
   'delete-todo',
   'toggle-completed',
   'toggle-favorite',
+  'edit-todo',
 ]);
 </script>
 
