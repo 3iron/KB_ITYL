@@ -97,7 +97,7 @@ const editTodo = (id) => {
   const target = state.todoList.find((item) => item.id === id);
   if (!target) return;
 
-  const newTodo = prompt('수정할 할 일을 입력하세요.', target.todo);
+  const newTodo = prompt('수정할 할일을 입력하세요.', target.todo);
 
   if (newTodo === null) return;
 
