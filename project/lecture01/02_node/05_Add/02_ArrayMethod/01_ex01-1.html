@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="fruits">
+      <p>Apple</p>
+      <p>Banana</p>
+      <p>Orange</p>
+    </div>
+
+    <script>
+      const fruits = document.querySelectorAll('.fruits p');
+      // fruits는 3개의 p 태그를 포함한 노드 리스트(배열과 비슷한 구조)
+      // fruits를 배열로 변환
+      const fruitArray = Array.from(fruits);
+      console.log(fruitArray);
+      // 배열 취급 map()을 사용
+      const fruitNames = fruitArray.map((fruit) => fruit.textContent);
+      console.log(fruitNames);
+      // ["Apple", "Banana", "Orange"]
+    </script>
+  </body>
+</html>
