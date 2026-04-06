@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title></title>
+  </head>
+  <body>
+    <form>
+      <fieldset style="width: 600px">
+        <table>
+          <h2>글 작성하기</h2>
+          <tr>
+            <td>
+              <label for="writer" style="font-weight: bold">작성자</label>
+            </td>
+            <td><input type="text" id="writer" name="writer" /></td>
+          </tr>
+
+          <tr>
+            <td>
+              <label for="userid" style="font-weight: bold">아이디</label>
+            </td>
+            <td><input type="text" id="userid" name="userid" /></td>
+          </tr>
+
+          <tr>
+            <td>
+              <label for="email1" style="font-weight: bold">이메일</label>
+            </td>
+            <td>
+              <input type="text" id="email1" name="email1" /> @
+              <input type="text" id="email2" name="email2" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label for="phone1" style="font-weight: bold">휴대폰</label>
+            </td>
+            <td>
+              <select id="phone1" name="phone1">
+                <option>010</option>
+                <option>011</option>
+                <option>016</option>
+                <option>017</option>
+                <option>018</option>
+                <option>019</option>
+              </select>
+              -
+              <input type="text" id="phone2" name="phone2" size="10" />
+              -
+              <input type="text" id="phone3" name="phone3" size="10" />
+            </td>
+          </tr>
+
+          <tr>
+            <td><label for="title" style="font-weight: bold">글제목</label></td>
+            <td><input type="text" id="title" name="title" size="50" /></td>
+          </tr>
+
+          <tr>
+            <td><label for="content" style="font-weight: bold">내용</label></td>
+            <td>
+              <textarea
+                id="content"
+                name="content"
+                cols="50"
+                rows="10"
+              ></textarea>
+            </td>
+          </tr>
+
+          <tr>
+            <td></td>
+            <td>
+              <input type="submit" value="제출" />
+            </td>
+          </tr>
+        </table>
+      </fieldset>
+    </form>
+  </body>
+</html>

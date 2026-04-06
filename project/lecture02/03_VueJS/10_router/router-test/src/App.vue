@@ -3,7 +3,27 @@
     <Header />
     <!-- RouterView 태그 -->
     <!-- <router-view></router-view> -->
-    <RouterView />
+    <!-- <RouterView /> -->
+    <div class="card card-body border-0 pl-3 pr-3 pt-0">
+      <div class="row">
+        <div class="col-md-3 border">
+          <!-- named view : 이름이 맞는 RouterView 위치에 컴포넌트 넣기 -->
+          <!-- 사이드 메뉴 영역 -->
+          <RouterView name="left"></RouterView>
+        </div>
+        <div class="col-md-9 border">
+          <!-- 메인 화면 -->
+          <!-- name이 없는 경우 default -->
+          <RouterView></RouterView>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12 border">
+          <!-- footer 영역 -->
+          <RouterView name="footer"></RouterView>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <!-- <script setup>
@@ -12,6 +32,7 @@ import Header from '@/components/Header.vue';
 
 <script>
 import Header from '@/components/Header.vue';
+
 export default {
   components: { Header },
   setup() {
@@ -23,8 +44,23 @@ export default {
 </script>
 
 <style>
-.container {
+… .fa {
+  padding: 5px;
+  width: 30px;
   text-align: center;
-  margin-top: 10px;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa-facebook {
+  background: #3b5998;
+  color: white;
+}
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+.fa-instagram {
+  background: #125688;
+  color: white;
 }
 </style>
